@@ -45,7 +45,7 @@
                 </h2>
                 <h2 class="flex justify-center items-center gap-2 text-black font-bold cursor-pointer bg-[#41ff6b1a] p-[12px] rounded-[50px]"
                     id="copyBtn">
-                    <span>0</span>
+                    <span id="copyCount">0</span>
                     Copy
                 </h2>
             </div>
@@ -72,11 +72,11 @@
                     <span class="likeCount cursor-pointer"><i class="ri-heart-line"></i></span>
                 </div>
                 <h1 class="text-xl font-semibold mb-2">জাতীয় জরুরি সেবা</h1>
-                <p class="text-gray-500 mb-4">National Emergency</p>
-                <p class="font-bold text-2xl mb-2">999</p>
+                <p class="text-gray-500 mb-4 service-name">National Emergency</p>
+                <p class="font-bold text-2xl mb-2 service-number">999</p>
                 <p class="text-gray-400 bg-gray-200 px-4 py-2 rounded-full w-fit">সার্বজনীন</p>
                 <div class="flex gap-3 mt-5">
-                    <button class="btn flex-1  bg-gray-200 text-black"><span><i
+                    <button class="btn flex-1  bg-gray-200 text-black copy-btn"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
                     <button onclick="updateCoinCount('National Emergency', '999')"
                         class="btn flex-1 bg-[#00A63E] text-white"><span><i
@@ -90,11 +90,11 @@
                     <span class="likeCount cursor-pointer"><i class="ri-heart-line"></i></span>
                 </div>
                 <h1 class="text-xl font-semibold mb-2">পুলিশ</h1>
-                <p class="text-gray-500 mb-4">Police</p>
-                <p class="font-bold text-2xl mb-2">999</p>
+                <p class="text-gray-500 mb-4 service-name">Police</p>
+                <p class="font-bold text-2xl mb-2 service-number">999</p>
                 <p class="text-gray-400 bg-gray-200 px-4 py-2 rounded-full w-fit">পুলিশ</p>
                 <div class="flex gap-3 mt-5">
-                    <button class="btn flex-1  bg-gray-200 text-black"><span><i
+                    <button class="btn flex-1  bg-gray-200 text-black copy-btn"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
                     <button onclick="updateCoinCount('Police', '999')"
                         class="btn flex-1 bg-[#00A63E] text-white"><span><i
@@ -109,11 +109,11 @@
                     <span class="likeCount cursor-pointer"><i class="ri-heart-line"></i></span>
                 </div>
                 <h1 class="text-xl font-semibold mb-2">ফায়ার সার্ভিস</h1>
-                <p class="text-gray-500 mb-4">Fire Service</p>
-                <p class="font-bold text-2xl mb-2">999</p>
+                <p class="text-gray-500 mb-4 service-name">Fire Service</p>
+                <p class="font-bold text-2xl mb-2 service-number">999</p>
                 <p class="text-gray-400 bg-gray-200 px-4 py-2 rounded-full w-fit">ফায়ার</p>
                 <div class="flex gap-3 mt-5">
-                    <button class="btn flex-1  bg-gray-200 text-black"><span><i
+                    <button class="btn flex-1  bg-gray-200 text-black copy-btn"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
                     <button onclick="updateCoinCount('Fire Service', '999')"
                         class="btn flex-1 bg-[#00A63E] text-white"><span><i
@@ -128,11 +128,11 @@
                     <span class="likeCount cursor-pointer"><i class="ri-heart-line"></i></span>
                 </div>
                 <h1 class="text-xl font-semibold mb-2">অ্যাম্বুলেন্স</h1>
-                <p class="text-gray-500 mb-4">Ambulance</p>
-                <p class="font-bold text-2xl mb-2">1994-999999</p>
+                <p class="text-gray-500 mb-4 service-name">Ambulance</p>
+                <p class="font-bold text-2xl mb-2 service-number">1994-999999</p>
                 <p class="text-gray-400 bg-gray-200 px-4 py-2 rounded-full w-fit">স্বাস্থ্য</p>
                 <div class="flex gap-3 mt-5">
-                    <button class="btn flex-1  bg-gray-200 text-black"><span><i
+                    <button class="btn flex-1  bg-gray-200 text-black copy-btn"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
                     <button onclick="updateCoinCount('Ambulance', '1994-999999')"
                         class="btn flex-1 bg-[#00A63E] text-white"><span><i
@@ -147,11 +147,11 @@
                     <span class="likeCount cursor-pointer"><i class="ri-heart-line"></i></span>
                 </div>
                 <h1 class="text-xl font-semibold mb-2">নারী ও শিশু সহায়তা</h1>
-                <p class="text-gray-500 mb-4">Women & Child Helpline</p>
-                <p class="font-bold text-2xl mb-2">109</p>
+                <p class="text-gray-500 mb-4 service-name">Women & Child Helpline</p>
+                <p class="font-bold text-2xl mb-2 service-number">109</p>
                 <p class="text-gray-400 bg-gray-200 px-4 py-2 rounded-full w-fit">সহায়তা</p>
                 <div class="flex gap-3 mt-5">
-                    <button class="btn flex-1  bg-gray-200 text-black"><span><i
+                    <button class="btn flex-1  bg-gray-200 text-black copy-btn"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
                     <button onclick="updateCoinCount('Women & Child Helpline', '109')"
                         class="btn flex-1 bg-[#00A63E] text-white"><span><i
@@ -166,11 +166,11 @@
                     <span class="likeCount cursor-pointer"><i class="ri-heart-line"></i></span>
                 </div>
                 <h1 class="text-xl font-semibold mb-2">দুদক</h1>
-                <p class="text-gray-500 mb-4">Anti-Corruption</p>
-                <p class="font-bold text-2xl mb-2">106</p>
+                <p class="text-gray-500 mb-4 service-name">Anti-Corruption</p>
+                <p class="font-bold text-2xl mb-2 service-number">106</p>
                 <p class="text-gray-400 bg-gray-200 px-4 py-2 rounded-full w-fit">সরকারি</p>
                 <div class="flex gap-3 mt-5">
-                    <button class="btn flex-1  bg-gray-200 text-black"><span><i
+                    <button class="btn flex-1  bg-gray-200 text-black copy-btn"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
                     <button onclick="updateCoinCount('Anti-Corruption', '106')"
                         class="btn flex-1 bg-[#00A63E] text-white"><span><i
@@ -185,11 +185,11 @@
                     <span class="likeCount cursor-pointer"><i class="ri-heart-line"></i></span>
                 </div>
                 <h1 class="text-xl font-semibold mb-2">বিদ্যুৎ বিভ্রাট</h1>
-                <p class="text-gray-500 mb-4">Electricity Outage</p>
-                <p class="font-bold text-2xl mb-2">16216</p>
+                <p class="text-gray-500 mb-4 service-name">Electricity Outage</p>
+                <p class="font-bold text-2xl mb-2 service-number">16216</p>
                 <p class="text-gray-400 bg-gray-200 px-4 py-2 rounded-full w-fit">বিদ্যুৎ</p>
                 <div class="flex gap-3 mt-5">
-                    <button class="btn flex-1  bg-gray-200 text-black"><span><i
+                    <button class="btn flex-1  bg-gray-200 text-black copy-btn"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
                     <button onclick="updateCoinCount('Electricity Outage', '16216')"
                         class="btn flex-1 bg-[#00A63E] text-white"><span><i
@@ -204,11 +204,11 @@
                     <span class="likeCount cursor-pointer"><i class="ri-heart-line"></i></span>
                 </div>
                 <h1 class="text-xl font-semibold mb-2">ব্র্যাক</h1>
-                <p class="text-gray-500 mb-4">Brac</p>
-                <p class="font-bold text-2xl mb-2">16445</p>
+                <p class="text-gray-500 mb-4 service-name">Brac</p>
+                <p class="font-bold text-2xl mb-2 service-number">16445</p>
                 <p class="text-gray-400 bg-gray-200 px-4 py-2 rounded-full w-fit">এনজিও</p>
                 <div class="flex gap-3 mt-5">
-                    <button class="btn flex-1  bg-gray-200 text-black"><span><i
+                    <button class="btn flex-1  bg-gray-200 text-black copy-btn"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
                     <button onclick="updateCoinCount('Brac', '16445')"
                         class="btn flex-1 bg-[#00A63E] text-white"><span><i
@@ -223,11 +223,11 @@
                     <span class="likeCount cursor-pointer"><i class="ri-heart-line"></i></span>
                 </div>
                 <h1 class="text-xl font-semibold mb-2">বাংলাদেশ রেলওয়ে</h1>
-                <p class="text-gray-500 mb-4">Bangladesh Railway</p>
-                <p class="font-bold text-2xl mb-2">163</p>
+                <p class="text-gray-500 mb-4 service-name">Bangladesh Railway</p>
+                <p class="font-bold text-2xl mb-2 service-number">163</p>
                 <p class="text-gray-400 bg-gray-200 px-4 py-2 rounded-full w-fit">পরিবহন</p>
                 <div class="flex gap-3 mt-5">
-                    <button class="btn flex-1  bg-gray-200 text-black"><span><i
+                    <button class="btn flex-1  bg-gray-200 text-black copy-btn"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
                     <button onclick="updateCoinCount('Bangladesh Railway', '163')"
                         class="btn flex-1 bg-[#00A63E] text-white"><span><i
@@ -236,7 +236,7 @@
             </div>
         </div>
 
-        <div id="callHistory" class="right-container w-full md:w-80 bg-white rounded-lg shadow-md p-4 h-fit">
+        <div id="callHistory" class="right-container w-full md:w-80 bg-white rounded-lg shadow-md p-4 h-[1120px]">
             <div class="flex justify-between items-center gap-3">
                 <h1 class="text-xl font-semibold mb-2 flex items-center gap-2"><i class="ri-history-line"></i> Call
                     History</h1>

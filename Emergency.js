@@ -1,3 +1,4 @@
+//  * Menu Toggle
  const menuToggle = document.getElementById("menuToggle");
  const menuItems = document.getElementById("menuItems");
 
@@ -5,6 +6,8 @@
      menuItems.classList.toggle("hidden")
  });
 
+
+//  * Love System
  const heartBtn = document.getElementById("heartBtn");
  let heartBtnValue = parseInt(heartBtn.innerText);
  const likeCount = document.getElementsByClassName("likeCount");
@@ -15,10 +18,12 @@
          heartBtnValue++;
          heartBtn.innerText = heartBtnValue;
      });
- }
- let coin = 100;
- const coinCount = document.getElementById("coinCount");
- const callHistoryItems = document.getElementById("callHistoryItems");
+ };
+
+// * Coin System
+let coin = 100;
+const coinCount = document.getElementById("coinCount");
+const callHistoryItems = document.getElementById("callHistoryItems");
 
  function updateCoinCount(serviceName, serviceNumber) {
      if (coin < 20) {
@@ -43,8 +48,28 @@
      `;
          callHistoryItems.appendChild(div);
      }
- }
+ };
 
  document.getElementById("clearHistoryBtn").addEventListener("click", () => {
-       callHistoryItems.innerHTML = ""; 
+     callHistoryItems.innerHTML = "";
+ });
+
+ // Copy Count
+ let copyCount = 0;
+ const copyCountElement = document.getElementById("copyCount");
+
+ const copyButtons = document.getElementsByClassName("copy-btn");
+
+ for (let i = 0; i < copyButtons.length; i++) {
+    copyButtons[i].addEventListener("click", () => {
+        const card = copyButtons[i].closest(".card");
+        const number = card.getElementsByClassName("service-number")[0].innerText;
+        navigator.clipboard.writeText(number).then(() => {
+            copyCount++;
+            copyCountElement.innerText = copyCount;
+            alert(`নাম্বারটি কপি করা হয়েছে: ${number}`);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
     });
+ };
