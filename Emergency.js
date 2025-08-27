@@ -18,7 +18,7 @@
  }
  let coin = 100;
  const coinCount = document.getElementById("coinCount");
- const callHistory = document.getElementById("callHistory");
+ const callHistoryItems = document.getElementById("callHistoryItems");
 
  function updateCoinCount(serviceName, serviceNumber) {
      if (coin < 20) {
@@ -40,7 +40,11 @@
                     <p class="text-black">${new Date().toLocaleTimeString()}</p>
                 </div>
             </div>
-     `
-         callHistory.appendChild(div);
+     `;
+         callHistoryItems.appendChild(div);
      }
  }
+
+ document.getElementById("clearHistoryBtn").addEventListener("click", () => {
+       callHistoryItems.innerHTML = ""; 
+    });

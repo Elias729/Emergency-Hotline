@@ -1,57 +1,18 @@
-<!-- Coin Show -->
-<h2 class="flex justify-center items-center gap-2 text-black font-bold cursor-pointer bg-[#41ff6b1a] p-[12px] rounded-[50px]"
-    id="coinBtn">
-    <span id="coinCount">100</span>
-    <img src="./assets/coin.png" alt="coin" class="h-6 w-6 sm:h-[30px] sm:w-[30px]">
-</h2>
-
-<!-- Service Card -->
-<div class="card h-[360px] bg-white shadow-md p-10">
-    <div class="flex justify-between items-center mb-3">
-        <img src="./assets/police.png" alt="police" class="w-[50px] h-[50px] bg-[#FFE3E2] rounded-2xl p-3">
-        <span class="likeCount cursor-pointer"><i class="ri-heart-line"></i></span>
-    </div>
-    <h1 class="text-xl font-semibold mb-2">পুলিশ</h1>
-    <p class="text-gray-500 mb-4">Police</p>
-    <p class="font-bold text-2xl mb-2">999</p>
-    <p class="text-gray-400 bg-gray-200 px-4 py-2 rounded-full w-fit">পুলিশ</p>
-    <div class="flex gap-3 mt-5">
-        <button class="btn flex-1 bg-gray-200 text-black"><span><i class="ri-file-copy-line"></i></span>Copy</button>
-
-        <!-- Call Button -->
-        <button onclick="callService('পুলিশ','999')" class="btn flex-1 bg-[#00A63E] text-white">
-            <span><i class="ri-phone-line"></i></span>Call
-        </button>
-    </div>
-</div>
-
 <!-- Call History Section -->
-<div class="mt-8">
+<div class="mt-8 flex justify-between items-center">
     <h2 class="text-lg font-bold">Call History</h2>
-    <ul id="callHistory" class="list-disc pl-5 text-gray-700"></ul>
+    <button id="clearHistoryBtn" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">
+        Clear History
+    </button>
 </div>
+<ul id="callHistory" class="list-disc pl-5 text-gray-700 mt-3">
+    ksk
+</ul>
 
 <script>
-    let coins = 100; // শুরুতে কয়েন
-    const coinCount = document.getElementById("coinCount");
-    const callHistory = document.getElementById("callHistory");
-
-    function callService(serviceName, serviceNumber) {
-        if (coins < 20) {
-            alert("You don’t have enough coins to make a call.");
-            return;
-        }
-
-        // 1. Alert
-        alert(`Calling ${serviceName}: ${serviceNumber}`);
-
-        // 2. Reduce Coins
-        coins -= 20;
-        coinCount.innerText = coins;
-
-        // 3. Add to Call History
-        const li = document.createElement("li");
-        li.innerText = `${serviceName} - ${serviceNumber}`;
-        callHistory.appendChild(li);
-    }
+    // Clear History Button
+    const clearHistoryBtn = document.getElementById("clearHistoryBtn");
+    clearHistoryBtn.addEventListener("click", () => {
+        callHistory.innerHTML = ""; // সব মুছে ফেলা হবে
+    });
 </script>
