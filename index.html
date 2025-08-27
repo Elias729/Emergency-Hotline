@@ -38,9 +38,8 @@
                     <span id="heartBtn">0</span>
                     <img src="./assets/heart.png" alt="heart" class="h-6 w-6 sm:h-[30px] sm:w-[30px]">
                 </h2>
-                <h2 class="flex justify-center items-center gap-2 text-black font-bold cursor-pointer bg-[#41ff6b1a] p-[12px] rounded-[50px]"
-                    id="coinBtn">
-                    <span>100</span>
+                <h2 class="flex justify-center items-center gap-2 text-black font-bold cursor-pointer bg-[#41ff6b1a] p-[12px] rounded-[50px]">
+                    <span id="coinCount">100</span>
                     <img src="./assets/coin.png" alt="coin" class="h-6 w-6 sm:h-[30px] sm:w-[30px]">
                 </h2>
                 <h2 class="flex justify-center items-center gap-2 text-black font-bold cursor-pointer bg-[#41ff6b1a] p-[12px] rounded-[50px]"
@@ -78,7 +77,7 @@
                 <div class="flex gap-3 mt-5">
                     <button class="btn flex-1  bg-gray-200 text-black"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
-                    <button class="btn flex-1 bg-[#00A63E] text-white"><span><i
+                    <button onclick="updateCoinCount('National Emergency', '999')" class="btn flex-1 bg-[#00A63E] text-white"><span><i
                                 class="ri-phone-line"></i></span>Call</button>
                 </div>
             </div>
@@ -95,7 +94,7 @@
                 <div class="flex gap-3 mt-5">
                     <button class="btn flex-1  bg-gray-200 text-black"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
-                    <button class="btn flex-1 bg-[#00A63E] text-white"><span><i
+                    <button onclick="updateCoinCount('Police', '999')" class="btn flex-1 bg-[#00A63E] text-white"><span><i
                                 class="ri-phone-line"></i></span>Call</button>
                 </div>
             </div>
@@ -113,7 +112,7 @@
                 <div class="flex gap-3 mt-5">
                     <button class="btn flex-1  bg-gray-200 text-black"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
-                    <button class="btn flex-1 bg-[#00A63E] text-white"><span><i
+                    <button onclick="updateCoinCount('Fire Service', '999')" class="btn flex-1 bg-[#00A63E] text-white"><span><i
                                 class="ri-phone-line"></i></span>Call</button>
                 </div>
             </div>
@@ -131,7 +130,7 @@
                 <div class="flex gap-3 mt-5">
                     <button class="btn flex-1  bg-gray-200 text-black"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
-                    <button class="btn flex-1 bg-[#00A63E] text-white"><span><i
+                    <button onclick="updateCoinCount('Ambulance', '1994-999999')" class="btn flex-1 bg-[#00A63E] text-white"><span><i
                                 class="ri-phone-line"></i></span>Call</button>
                 </div>
             </div>
@@ -149,7 +148,7 @@
                 <div class="flex gap-3 mt-5">
                     <button class="btn flex-1  bg-gray-200 text-black"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
-                    <button class="btn flex-1 bg-[#00A63E] text-white"><span><i
+                    <button onclick="updateCoinCount('Women & Child Helpline', '109')" class="btn flex-1 bg-[#00A63E] text-white"><span><i
                                 class="ri-phone-line"></i></span>Call</button>
                 </div>
             </div>
@@ -167,7 +166,7 @@
                 <div class="flex gap-3 mt-5">
                     <button class="btn flex-1  bg-gray-200 text-black"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
-                    <button class="btn flex-1 bg-[#00A63E] text-white"><span><i
+                    <button onclick="updateCoinCount('Anti-Corruption', '106')" class="btn flex-1 bg-[#00A63E] text-white"><span><i
                                 class="ri-phone-line"></i></span>Call</button>
                 </div>
             </div>
@@ -185,7 +184,7 @@
                 <div class="flex gap-3 mt-5">
                     <button class="btn flex-1  bg-gray-200 text-black"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
-                    <button class="btn flex-1 bg-[#00A63E] text-white"><span><i
+                    <button onclick="updateCoinCount('Electricity Outage', '16216')" class="btn flex-1 bg-[#00A63E] text-white"><span><i
                                 class="ri-phone-line"></i></span>Call</button>
                 </div>
             </div>
@@ -203,7 +202,7 @@
                 <div class="flex gap-3 mt-5">
                     <button class="btn flex-1  bg-gray-200 text-black"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
-                    <button class="btn flex-1 bg-[#00A63E] text-white"><span><i
+                    <button onclick="updateCoinCount('Brac', '16445')" class="btn flex-1 bg-[#00A63E] text-white"><span><i
                                 class="ri-phone-line"></i></span>Call</button>
                 </div>
             </div>
@@ -221,27 +220,19 @@
                 <div class="flex gap-3 mt-5">
                     <button class="btn flex-1  bg-gray-200 text-black"><span><i
                                 class="ri-file-copy-line"></i></span>Copy</button>
-                    <button class="btn flex-1 bg-[#00A63E] text-white"><span><i
+                    <button onclick="updateCoinCount('Bangladesh Railway', '163')" class="btn flex-1 bg-[#00A63E] text-white"><span><i
                                 class="ri-phone-line"></i></span>Call</button>
                 </div>
             </div>
         </div>
 
-        <div class="right-container w-full md:w-80 bg-white rounded-lg shadow-md p-4 h-[1120px]">
+        <div id="callHistory" class="right-container w-full md:w-80 bg-white rounded-lg shadow-md p-4 h-[1120px]">
             <div class="flex justify-between items-center gap-3">
                 <h1 class="text-xl font-semibold mb-2 flex items-center gap-2"><i class="ri-history-line"></i> Call
                     History</h1>
                 <button class="btn bg-[#00A63E] text-white rounded-full px-4">Clear</button>
             </div>
-            <div class="bg-white p-5 rounded-lg shadow-md mt-5 flex justify-between items-center">
-                <div class="">
-                    <h2 class="mt-2 font-bold text-black mb-2">জাতীয় জরুরি সেবা</h2>
-                    <p class="text-gray-500">999</p>
-                </div>
-                <div>
-                    <p class="text-black">11:36:58 AM</p>
-                </div>
-            </div>
+            
         </div>
     </section>
     <script src="Emergency.js"></script>
